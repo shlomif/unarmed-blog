@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE
+    html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<title>Why some Great Hackers Write Bad Code</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="Shlomi Fish" />
+<meta name="description" content="Shlomi Fish's Homepage" />
+<meta name="keywords" content="" />
+<link rel="stylesheet" href="./style.css" type="text/css" media="screen, projection" title="Normal" />
+<link rel="stylesheet" href="./print.css" type="text/css" media="print" />
+<style type="text/css">
+a:hover { background-color: palegreen;}
+</style>
+</head>
+<body>
+<h1>Why some Great Hackers Write Bad Code</h1>
+
+<p>
+First of all, see <a href="http://www.paulgraham.com/gh.html">Paul Graham's 
+essay called "Great Hackers"</a> as well as his 
+<a href="http://www.paulgraham.com/gba.html">"The Word 'Hacker'" essay about
+why it applies to both computer intruders and enthusiasts of software (or 
+otherwise)</a>. In any case, I'm going to make a startling claim: <b>some
+Great Hackers write inelegant code</b>. Furthermore, I may go as far as
+saying that some great hackers cannot write code very elegantly. And what
+I want to say is that it doesn't matter as much as we think.
+</p>
+
+<p>
+Why? Because inelegant code is not necessarily bad code. Moreover, there's
+more to being a great programmer than writing elegant code because there
+are other parameters for 
+<a href="http://www.shlomifish.org/philosophy/computers/high-quality-software/rev2/">software quality</a> than just how elegant a code is, and a great
+programmer is judged by more than one.
+</p>
+
+<p>
+Let's start by making some more generally-accepted claims.
+</p>
+
+<p><b>Everyone Can Write Non-Elegant Code</b></p>
+
+<p>
+Everyone can write non-elegant code, and often do. One reason is that 
+just like no one is <a href="http://xkcd.com/406/">going to write
+a scientific paper to dismiss a stupid blog comment</a>, so would most
+people not bother applying all possible code elegance principles for
+a very simple script (possibly a throwaway one on the command line).
+</p>
+
+<p>
+Another reason is that often people do non-conscious or even conscious
+coding mistakes or
+<a href="http://www.slideshare.net/xSawyer/red-flags-1683319">red flags</a>,
+which they hope to remedy later. And finally due to the 
+<a href="http://en.wikipedia.org/wiki/You_ain%27t_gonna_need_it">principle
+of avoiding over-engineering (or YAGNI)</a>, and the fact that a code often
+outgrows its original intention (as was the case for many notable
+open-source projects today), which results in somewhat patchy and inelegant
+code. This code can be refactored, but it still often remains inelegant
+in many respects.
+</p>
+
+<p><b>Functional but Inelegant Code is Better than Nothing</b></p>
+
+<p>
+What would you rather have: a super-elegant program for doing something
+meaningless like printing "Hello World!" 
+(<a href="http://www.roesler-ac.de/wolfram/hello.htm">here you go - knock
+yourself out.</a>), or a large but not very elegant code-base, which is
+still functional and mostly bug-free, that implements something amazing like a 
+gcc-compatible C/C++ compiler, or a functional web-browser, or a usable
+dialect of Lisp, or a usable desktop environment, or whatever. (And no, I don't
+mean one of the new age lightweight window managers which we've seen an
+inflation of, or yet another Scheme implementation - these are relatively
+easy to write). 
+</p>
+
+<p>
+I don't know about you, but I'll prefer the functional but inelegant
+code-base (assuming its licence and other technical barriers are OK.), because
+there's no way I can make the "hello world" program into something like that.
+On the other hand, if I'm unhappy with the lack of elegance and modularity of
+the large codebase, I can always start by writing automated tests for it, and
+then refactor it to shape. "Joel on Software" describes <a href="http://www.joelonsoftware.com/articles/fog0000000348.html">the
+    process of heavily refactoring a bad codebase he had</a>, and said that it
+took him 3 weeks, was quite mindless and was highly rewarding. I can attest
+that it was true from my experience of <a href="http://news.perlfoundation.org/2007/05/xmlrss_cleanup_grant_completed.html">working
+    on the CPAN XML-RSS module</a> where I first fixed bugs (while adding some
+regression tests), and then wrote automated tests (while also fixing some bugs
+I ran into), and finally doing a ground-up refactoring of it.
+</p>
+
+<p>
+Even the least modular codebase, which is still functional, can probably be
+salvaged more easily than completely rewriting it. So, a large amount
+of functional code is superior to a very small amount of fully elegant
+code.  
+</p>
+
+<p><b>Some Great Hacks Did Not Have Very Elegant Code</b></p>
+
+<p>
+Was the original 
+<a href="http://en.wikipedia.org/wiki/Patch_%28Unix%29">patch by Larry Wall</a>
+elegant? It was not. The original perl 1 also suffered from many big no-nos, 
+including many <tt>if (!strncmp(...))</tt>'s in the lexer, and lots of other
+anti-patterns, and I still recall the hideousness of the original 
+<a href="http://perldoc.perl.org/s2p.html">s2p (= sed-to-perl)</a> 
+by Larry Wall, which was more recently replaced by a rewrite. The first 
+<a href="http://en.wikipedia.org/wiki/Linux_kernel">Linux kernel</a> was
+also very ad-hoc, not portable to other architectures, and could only run
+on the specific architecture which Linus Torvalds had at home.
+</p>
+
+<p>
+But they were still great hacks. Why? Because they were otherwise usable, or
+a good promising prototype that were later enhanced into something incredible.
+patch immediately proved to be instrumental in sharing changes between 
+programmers, and has been 
+<a href="http://catb.org/esr/writings/taoup/html/ch02s01.html#id2880014">given 
+    a place of honour in the history section of "The Art of 
+    UNIX Programming"</a>; perl 1, despite all of its limitations has proved
+that there was a more robust and easy way to write shell scripts and even
+a lot of tasks that previously required C (or as Larry Wall noted 
+<a href="http://www.perl.org.il/presentations/larry-wall-present-continuous-future-perfect/transcript.html">unifying 
+    whipuptitude and manipulexity</a>), which pioneered the case for
+the agile languages (or so-called "scripting languages"); and the Linux kernel
+while being very limited was good enough to start work on a more mature kernel,
+that <a href="http://catb.org/~esr/writings/cathedral-bazaar/">with the right
+    attitude (see ESR's "The Cathedral and the Bazaar" article)</a> progressed
+rapidly into becoming an industrial strength kernel, that combined with the
+the previously or independently written GNU runtime and other software also 
+formed the basis of the Linux (or so-called "GNU/Linux") industrial-strength,
+but open-source and possibly free-of-charge, operating system.
+</p>
+
+<p>
+As a result, we'll have to ignore the fact that they were not elegant at
+first, and to realise they provided a lot of inspiration, and a useful,
+mostly-functional code-base to build future work on.
+</p>
+
+<p>
+Which finally brings us to:
+</p>
+
+<p><b>Some great hackers don't write elegant code</b></p>
+
+<p>
+When we say someone is a great hacker, do we mean that this is because
+he writes elegant code? <a href="http://catb.org/esr/writings/homesteading/homesteading/ar01s11.html">There 
+    seems to be a taboo against publicly saying that hackers are bad
+    programmers</a> (though I've noticed some evidence to the contrary lately), 
+so I'll try to be very careful here. What I think is that there are many
+other qualities that a great hacker may possess that may compensate for
+inability to write very elegant code. This may include writing a lot of
+functional code, or functional code that has a lot of potential, leadership
+skills, good control of spoken and written English, attention to details,
+ability to receive and handle criticism well, finding time to maintain
+their project afterwards, close bugs, etc. handling abuse and many things I've 
+forgotten now. See <a href="http://producingoss.com/">the book
+    "Producing OSS"</a> (available online under a liberal licence)
+for an excellent comprehensive discussion of this.
+
+</p>
+
+<p>
+My point is that while code elegance is desirable and should be encouraged
+(and that more experienced or better programmers are right to instruct their
+less experienced peers on how to improve their code) it is not the only
+factor that affects its quality. Most of the code we find in the wild
+(including in the open-source world) is probably not very elegant
+or modular, and we can find many faults with it. But most of that code is
+functional, does what it should do, is not flooded with critical bugs,
+and should not be rewritten. 
+(<a href="http://www.shlomifish.org/philosophy/computers/open-source/foss-licences-wars/">Licensing</a> and other legal and technical obstacles put aside) 
+</p>
+
+<p><b>Conclusion: We care Too Much about Code Elegance</b></p>
+
+<p>
+I think that as open-source programmers, we are too quick to judge someone
+based on the quality of their code. "He writes awful code, so he's a bad
+programmer." Maybe it's because that as "hackers", we feel that coding
+is closer to an artform, than other people may wish to believe. I agree
+with such feelings, but we should also accept that people are not perfect
+or may not live to our standards at first.
+</p>
+
+<p>
+I think I write relatively elegant and modular code if I put my mind to
+it. But looking back at old code of mine, or even thinking about code
+I have since modified a lot of time, I get shivers thinking how bad it
+was. So we had not been perfect two years ago, and two years from now
+we're not going to be perfect either.
+</p>
+
+<p>
+My point is that when evaluating how much someone we know is a good hacker,
+we should ask ourselves many questions besides how modular their code is. 
+Do they write a lot of code quickly? Do they implement proof-of-concept 
+code with good ideas that other people are happy to contribute to? Can 
+they motivate other people? Do they communicate well in English? Do they
+they have other programming practices? Do their code perform well? We should 
+evaluate people based on several factors besides how well-written their
+code is.
+</p>
+
+<p>
+If you ask me, none of these qualities are set in stone, and a person can
+improve in any of them given enough time, dedication and the
+right attitude. Maybe I'm too naïve, but I'd rather err on naivity than 
+on cynicism. But we should understand that code elegance is not the only
+parameter for a programmer's competence.
+</p>
+
+</body>
+</html>
