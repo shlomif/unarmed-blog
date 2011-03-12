@@ -64,7 +64,7 @@ a very simple script (possibly a throwaway one on the command line).
 </p>
 
 <p>
-Another reason is that often people do non-conscious or even conscious
+Another reason is that often people do non-conscious, or even conscious,
 coding mistakes or
 <a href="http://www.slideshare.net/xSawyer/red-flags-1683319">red flags</a>,
 which they hope to remedy later. And finally due to the 
@@ -80,7 +80,7 @@ inelegant in many respects.
 
 <p>
 What would you rather have: a super-elegant program for doing something
-meaningless like printing "Hello World!" 
+meaningless like printing "Hello, World!" 
 (<a href="http://www.roesler-ac.de/wolfram/hello.htm">here you go - knock
 yourself out.</a>), or a large but not very elegant code-base, which is
 still functional and mostly bug-free, that implements something amazing:
@@ -93,8 +93,8 @@ easy to write).
 
 <p>
 I don't know about you, but I'll prefer the functional but inelegant
-code-base (assuming its licence and its other technical barriers are acceptable
-to me.), because there's no way I can make the "hello world" program into
+code-base, assuming its licence and its other technical barriers are acceptable
+to me. That's because there's no way I can make the "Hello, World!" program into
 something like that.  On the other hand, if I'm unhappy with the lack of
 elegance and modularity of the large code-base, I can always start by writing
 automated tests for it, and then refactor it until it's elegant enough. 
@@ -105,7 +105,7 @@ describes <a
 took him 3 weeks, was quite mindless and was highly rewarding. I can attest
 that it was true from my experience of <a
     href="http://news.perlfoundation.org/2007/05/xmlrss_cleanup_grant_completed.html">working
-    on the CPAN XML-RSS module</a> where I first fixed bugs (while adding some
+    on the CPAN XML-RSS module</a>, where I first fixed bugs (while adding some
 regression tests), and then wrote automated tests (while also fixing some bugs
 I ran into), and finally doing a ground-up refactoring of it.
 </p>
@@ -139,7 +139,7 @@ patch immediately proved to be instrumental in sharing changes between
 programmers, and has been 
 <a href="http://catb.org/esr/writings/taoup/html/ch02s01.html#id2880014">given
     a place of honour in the history section of "The Art of 
-    UNIX Programming"</a>; perl 1, despite all of its limitations proved
+    UNIX Programming"</a> (and even formed the basis of <a href="http://savannah.gnu.org/projects/patch/">GNU patch</a>); perl 1, despite all of its limitations proved
 that there was a more robust and easy way to write shell scripts and even
 a lot of tasks that previously required C (or as Larry Wall noted
 <a href="http://www.perl.org.il/presentations/larry-wall-present-continuous-future-perfect/transcript.html">combined
@@ -177,11 +177,11 @@ he or she writes elegant code? <a href="http://catb.org/esr/writings/homesteadin
     programmers</a> (though I've noticed some evidence to the contrary lately), 
 so I'll try to be very careful here. What I think is that there are many
 other qualities that a great hacker may possess that may compensate for
-inability to write very elegant code. This may include writing a lot of
+inability to write very elegant code. These may include writing a lot of
 functional code, or functional code that has a lot of potential, leadership
 skills, good control of spoken and written English, attention to details,
 ability to receive and handle criticism well, finding time to maintain
-their project afterwards, close bugs, handling abuse and many other things
+their project afterwards, close bugs, handling abuse, and many other things
 I've forgotten now. See <a href="http://producingoss.com/">the book
     "Producing OSS"</a> (available on-line under a liberal licence)
 for an excellent comprehensive discussion of this.
@@ -190,7 +190,8 @@ for an excellent comprehensive discussion of this.
 <p>
 My point is that while code elegance is desirable and should be encouraged
 (and that more experienced or better programmers are right to instruct their
-less experienced peers on how to improve their code) it is not the only
+less experienced peers on how to make their code more modular and paradigm
+-compliant), it is not the only
 factor that affects its quality. Most of the code we find in the wild
 (including in the open-source world) is probably not very elegant
 or modular, and we can find many faults with it. But most of that code is
@@ -207,14 +208,15 @@ I think that as open-source programmers, we are too quick to judge someone
 based on the elegance and modularity of their code. "He writes awful code, so 
 he's a bad programmer.". Maybe it's due to the fact that as "hackers", we feel 
 that coding is closer to an art form, than other people may wish to believe. I 
-agree with such feelings, but we should also accept that people are not perfect
+agree with such sentiments, but we should also accept that people are not 
+perfect
 or may not live to our standards at first.
 </p>
 
 <p>
 I think I write relatively elegant and modular code if I put my mind to
 it. But looking back at old code of mine, or even thinking about code
-I have since modified a lot of time, I get shivers thinking how bad it
+I have since modified a lot of time, I am ashamed to think how bad it
 was. So we had not been perfect two years ago, and two years from now
 we're not going to be perfect either.
 </p>
@@ -225,8 +227,9 @@ we should ask ourselves many questions besides how modular their code is.
 Do they write a lot of code quickly? Do they implement proof-of-concept
 code with good ideas that other people are happy to contribute to? Can 
 they motivate other people? Do they communicate well in English? Do they
-they have other programming practices? Do their code perform well? Do they
-have good social skills? There's more than one variable in the equation.
+they have other positive programming practices? Do their code perform well?
+Do they have good social skills? There's more than one variable in the 
+equation.
 </p>
 
 <p>
@@ -243,8 +246,8 @@ However, we should understand that code elegance is not the only parameter for
 a programmer's competence, and finally, that even inexperienced, or mediocre
 hackers can prove of use in many cases, because they will either uncover
 limitations in the open-source project's on-line presence, accessibility
-and usability, or they can work on other tasks, while they improve. Back when
-I contributed a little to
+and usability, or they can work on other tasks, while their competency 
+improves. Back when I contributed a little to
 <a href="http://freshmeat.net/projects/subversion/">Subversion</a>, and
 submitted patches there, I received many comments on very small aspects
 of the code that stood against their rigid standards of coding. But I didn't
