@@ -1,7 +1,7 @@
 all:
 
 upload:
-	rsync -a -v --progress *.xhtml "$${HOMEPAGE_SSH_PATH}"/criminal-mind/
+	rsync -a -v --progress *.xhtml "$${HOMEPAGE_SSH_PATH}"/We-are-Qs/
 
 firefox:
 	firefox *.xhtml
