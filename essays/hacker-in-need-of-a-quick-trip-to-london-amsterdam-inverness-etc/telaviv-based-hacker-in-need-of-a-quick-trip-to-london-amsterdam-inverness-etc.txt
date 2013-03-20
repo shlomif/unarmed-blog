@@ -19,14 +19,6 @@ http://reddit.com/ and on numerous blogs, microblogs, etc. Search engines
 such as http://www.google.com/ or http://duckduckgo.com/ appear to love
 www.shlomifish.org .
 
-You will probably find my various creations of art and humour the most
-entertaining and enlightening - http://www.shlomifish.org/humour/ (including
-novellas, screenplays, aphorisms, factoids about Chuck Norris/etc., shorter
-“bits”, quotes, edited logs of IRC conversations, etc.) and essays such as
-http://www.shlomifish.org/philosophy/the-eternal-jew/ and
-http://www.shlomifish.org/philosophy/philosophy/advice-for-the-young/ which
-some people may find even funnier than the stuff under /humour/ .
-
 Now, I have been stuck living in Tel Aviv, Israel, for far too long and feel
 like I'm getting burned out here, and need a change of scenery. As a result
 I ask for the assistance of likely minded geeks, amateurs (see
@@ -35,7 +27,18 @@ http://www.paulgraham.com/gba.html ), polymaths and celebrities. Please quickly
 spread this message up the hacker ladder, until you are a quick contact away
 from the British, Dutch, etc. royal families and can request them to give
 me a British/Dutch/etc. citizenship and passport, without any need for the
-silly American or Israeli red tape.
+silly Israeli or American red tape. As a hacker, I find the need to waste
+my time on silly burocratic procedures a big waste of time, and am quite
+impatient to get productive work done quickly and easily.
+
+You will probably find my various creations of art and humour the most
+entertaining and enlightening - http://www.shlomifish.org/humour/ (including
+novellas, screenplays, aphorisms, factoids about Chuck Norris/etc., shorter
+“bits”, quotes, edited logs of IRC conversations, etc.) and essays such as
+http://www.shlomifish.org/philosophy/the-eternal-jew/ and
+http://www.shlomifish.org/philosophy/philosophy/advice-for-the-young/ which
+some people may find even funnier than the stuff under /humour/ .
+
 
 This will in turn allow me to take on a much needed trip to such European
 cities as http://en.wikipedia.org/wiki/London ,
