@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE
+    html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<title>Sherlock Holmes about the Awk Programming Language</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="Shlomi Fish" />
+<meta name="description" content="Shlomi Fish's Homepage" />
+<meta name="keywords" content="" />
+<link rel="stylesheet" href="./style.css" type="text/css" media="screen, projection" title="Normal" />
+<link rel="stylesheet" href="./print.css" type="text/css" media="print" />
+<style type="text/css">
+a:hover { background-color: palegreen;}
+</style>
+</head>
+<body>
+<!-- Tags: sherlock, holmes, psychology, software, memory
+-->
+<h1>Sherlock Holmes about the Awk Programming Language</h1>
+
+<p>
+I enjoyed reading some of Sir Arthur Conan Doyle’s writings about
+the fictional detective <a
+href="http://en.wikipedia.org/wiki/Sherlock_Holmes">Sherlock Holmes</a> when
+I was younger, which were entertaining (although possibly distanced from
+the way actual crime investigation actually works), and interesting. I
+vividly recall one excerpt from the very first Sherlock Holmes story
+<a href="http://en.wikisource.org/wiki/A_Study_in_Scarlet">A
+Study in Scarlet</a>:
+</p>
+
+<blockquote>
+<p>
+His ignorance was as remarkable as his knowledge. Of contemporary literature,
+philosophy and politics he appeared to know next to nothing. Upon my quoting
+Thomas Carlyle, he enquired in the naivest way who he might be and what he had
+done. My surprise reached a climax, however, when I found incidentally that he
+was ignorant of the Copernican Theory and of the composition of the Solar
+System. That any civilized human being in this nineteenth century should not be
+aware that the earth travelled round the sun appeared to be to me such an
+extraordinary fact that I could hardly realize it.
+</p>
+
+<p>
+"You appear to be astonished," he said, smiling at my expression of surprise.
+"Now that I do know it I shall do my best to forget it."
+</p>
+
+<p>
+"To forget it!"
+</p>
+
+<p>
+"You see," he explained, "I consider that a man's brain originally is like a
+little empty attic, and you have to stock it with such furniture as you choose.
+A fool takes in all the lumber of every sort that he comes across, so that the
+knowledge which might be useful to him gets crowded out, or at best is jumbled
+up with a lot of other things, so that he has a difficulty in laying his hands
+upon it. Now the skilful workman is very careful indeed as to what he takes
+into his brain attic. He will have nothing but the tools which may help him in
+doing his work, but of these he has a large assortment, and all in the most
+perfect order. It is a mistake to think that that little room has elastic walls
+and can distend to any extent. Depend upon it there comes a time when for every
+addition of knowledge you forget something that you knew before. It is of the
+highest importance, therefore, not to have useless facts elbowing out the
+useful ones."
+</p>
+
+<p>
+"But the Solar System!" I protested.
+</p>
+
+<p>
+"What the deuce is it to me?" he interrupted impatiently; "you say that we go
+round the sun. If we went round the moon it would not make a pennyworth of
+difference to me or to my work."
+</p>
+
+</blockquote>
+
+<p>
+(<a href="http://en.wikisource.org/wiki/A_Study_in_Scarlet/Part_1/Chapter_2">Chapter 2 of A Study in Scarlet</a> by Sir Arthur Conan Doyle, under the public
+domain in most countries.)
+</p>
+
+<p>
+Conan Doyle was naturally exaggerating here in portraying the ideal
+of Sherlock Holmes (as few, if any, human beings can forget that the Earth
+revolves around the Sun), but the principle still stands: we need to make
+a conscious decision of how to manage our memory, because there is a limit
+to how many different aspects can put inside our resident memory, or
+otherwise we'll forget more important stuff.
+</p>
+
+<p>
+So what does it has to do with the Awk programming language? Many decades
+after A Study in Scarlet, <a href="http://www.catb.org/esr/">Eric
+S. Raymond</a> had this to say in his book
+<a href="http://www.catb.org/esr/writings/taoup/"><i>The Art of Unix
+Programming</i></a>:
+</p>
+
+<blockquote>
+
+<p>
+A case study of awk is included to point out that it is not a model for
+emulation; in fact, since 1990 it has largely fallen out of use. It has been
+superseded by new-school scripting languages—notably Perl, which was explicitly
+designed to be an awk killer. The reasons are worthy of examination, because
+they constitute a bit of a cautionary tale for minilanguage designers.
+</p>
+
+<p>
+The awk language was originally designed to be a small, expressive
+special-purpose language for report generation. Unfortunately, it turns out to
+have been designed at a bad spot on the complexity-vs.-power curve. The action
+language is noncompact, but the pattern-driven framework it sits inside keeps
+it from being generally applicable — that's the worst of both worlds. And the
+new-school scripting languages can do anything awk can; their equivalent
+programs are usually just as readable, if not more so.
+</p>
+
+<p>
+For a few years after the release of Perl in 1987, awk remained competitive
+simply because it had a smaller, faster implementation. But as the cost of
+compute cycles and memory dropped, the economic reasons for favoring a
+special-purpose language that was relatively thrifty with both lost their
+force. Programmers increasingly chose to do awklike things with Perl or (later)
+Python, rather than <strong>keep two different scripting languages in their
+heads</strong>.[90]
+By the year 2000 awk had become little more than a memory for most old-school
+Unix hackers, and not a particularly nostalgic one.
+</p>
+
+<p>
+Falling costs have changed the tradeoffs in minilanguage design. Restricting
+your design's capabilities to buy compactness may still be a good idea, but
+doing so to economize on machine resources is a bad one. Machine resources get
+cheaper over time, but <strong>space in programmers' heads only gets more
+expensive</strong>.
+Modern minilanguages can either be general but noncompact, or specialized but
+very compact; specialized but noncompact simply won't compete.
+</p>
+
+</blockquote>
+
+(Emphasis mine.)
+
+<p>
+(<a href="http://www.catb.org/esr/writings/taoup/html/ch08s02.html#awk">Case Study: awk in minilanguages</a> in <i>The Art of Unix Programming</i> by Eric
+Steven Raymond, text available under the
+Creative Commons Attribution-NonDerivatives licence, and hopefully quoted
+here (with attribution) under
+<a href="http://en.wikipedia.org/wiki/Fair_use">fair use</a> auspices.)
+</p>
+
+<p>
+Back in 1996, after I first learned Perl and started working on Unix, I asked
+one of my co-workers if I should learn Awk and he said “Forget it! Perl can
+do everything Awk does and more, and is a much better language”. (That was some
+time before other of the so-called “scripting languages” that gained popularity
+after Perl, were notable and/or mature enough to be considered by most sane
+people.) While
+I was not entirely convinced, and also ended up using GNU awk (gawk) to write
+a small text processing script for Microsoft Windows at one point
+(because I preferred
+not to investigate how to make the perl executable more self-contained). For a
+while, I felt guilty about not being fluent in Awk, until I read what Raymond
+said, when I realised why he, my co-worker, and Conan Doyle’s words of
+Sherlock Holmes, have been right all along.
+</p>
+
+<p>
+Some people take more radical approaches to managing their memory. A friend
+of mine mostly converted from Perl 4 to Python, which due to syntactic
+limitations is not very suitable for one-off scripts on the command line, as
+his scripting language. He told me that whenever he has to perform a text
+processing or a similar task from the command-line, he edits a new file in his
+text editor, which also gives him some boilerplate to write his script, edits
+it, saves the file, and finally calls it from the command line. If I did
+something like that whenever I wrote something on the command line, I would
+quickly become extremely unhappy, but I suppose it is a useful approach if
+one is most comfortable with Python for such tasks.
+</p>
+
+<p>
+Awk is not completely useless, and may sometimes need to be used for
+extra portability when old, antiquated or kept-minimal-on-purpose Unix systems,
+are involved, and is of important historical significance. However, in my
+case, I don't see a point in knowing it. If I need to learn it, I learn it
+enough to write what I need, and, like Sherlock Holmes, try to quickly forget
+it because I know I won't readily need this knowledge.
+</p>
+
+<p>
+Naturally, this extends to other fields aside from computing. One of my pupils
+for private lessons testified that he had photographic memory, and for the
+history <a href="http://en.wikipedia.org/wiki/Bagrut">matriculation
+examination</a>, he memorised the entire books, and during the exam wrote
+an paraphrased answer based on his memory, and as a result, got a very high
+grade, and eventually forgot most of it. Similarly, my sister, who now studies
+medicine, told me that she and her fellow students often memorised a lot of
+material in preparation for the examinations, only to forget it and then
+learn it again for a different examination, that also covered the same
+material. This makes me question the effectiveness of the methodology behind
+medical education, but still reinforces the original point.
+</p>
+
+<h2>The Other Side of the Coin</h2>
+
+<p>
+On the other hand, your knowledge and understanding of it should not be too
+specialised either, because one can infer many parallels from different
+fields of knowledge, and reach conclusions, because all knowledge is
+contiguous. By learning a little of everything and anything, you can often
+handle situations and have clearer thinking and greater creativity.
+</p>
+
+<p>
+In my screenplay
+<a href="http://www.shlomifish.org/humour/Star-Trek/We-the-Living-Dead/">Star
+    Trek: “We, the Living Dead”</a>, I describe an optimal situation of this in
+the “Planet of the Hebrews” where scholars each take different units of study
+and learn any that they want, and eventually are judged based on the number
+of units they learned, and the amount of useful contributions they have done.
+And you still shouldn't rule out that someone less experienced, younger, or
+less qualified, than you will be able to do as well, or even better than
+you (see what Paul Graham wrote about “amateurs” in
+<a href="http://www.paulgraham.com/opensource.html">“What business can learn
+from open source?”</a>).
+</p>
+
+<h2 id="license">License</h2>
+
+<p>
+This document is Copyright by Shlomi Fish, 2006, and is available
+under the
+terms of <a rel="license"
+href="http://creativecommons.org/licenses/by/3.0/">the Creative Commons
+Attribution License 3.0 Unported</a> (or at your option any
+later version of that licence).
+</p>
+
+<p>
+For securing additional rights, please contact
+<a href="http://www.shlomifish.org/me/contact-me/">Shlomi Fish</a>
+and see <a href="http://www.shlomifish.org/meta/copyrights/">the
+explicit requirements</a> that are being spelt from abiding by that licence.
+</p>
+
+<h2 id="meta">Meta</h2>
+
+<p>
+Despite enjoying captioned images for a long time, I am late to the game of
+creating them. You may know them as
+<a href="http://en.wikipedia.org/wiki/Lolcat">lolcats</a>, and they
+are also sometimes called “memes”, although the term “meme” is used
+for any unit of thought and more than just. However, I recently
+created three of them using <a href="http://commons.wikimedia.org/">Wikimedia
+    Commons</a>, or Google Image Search, as well as GIMP and Inkscape, and
+realised it is incredibly easy to do. I now truly understand why their
+low barrier to entry - almost everyone can take a photo of a cat or whatever
+and caption it - makes them so subversive,
+and why <a href="http://www.cheezburger.com/">the Cheezburger network</a> is
+being blocked by both Iran and China.
+</p>
+
+<p>
+I have done some work on
+<a href="http://www.shlomifish.org/humour/Star-Trek/We-the-Living-Dead/">Star
+    Trek: “We, the Living Dead”</a> (which is now close to being in a mostly
+usable state) and
+<a href="http://www.shlomifish.org/humour/Selina-Mandrake/">“Selina Mandrake
+- The Slayer”</a>, which combines a Buffy the Vampire Slayer
+parody and tribute (with a conscious and constant referencing of the
+original show) with many more elements. An Indian
+software developer, with whom I talked on the Internet, and who did not watch
+Buffy, said it was still very funny, so there may be hope for me yet.
+</p>
+
+<p>
+Cheers, all.
+</p>
+
+</body>
+</html>
