@@ -22,13 +22,13 @@ a:hover { background-color: palegreen;}
 <p>
 A "hacker" is any creative enthusiast of software (or more in
 general, any other field of endeavour, from cooking up to rocket science).
-Hackers are not necessarily computer intruders, though some of the more 
+Hackers are not necessarily computer intruders, though some of the more
 capable and honest ones would also qualify as "hackers".
-For more information, see 
-<a href="http://www.paulgraham.com/gh.html">Paul Graham's 
-essay "Great Hackers"</a> as well as his 
+For more information, see
+<a href="http://www.paulgraham.com/gh.html">Paul Graham's
+essay "Great Hackers"</a> as well as his
 <a href="http://www.paulgraham.com/gba.html">"The Word 'Hacker'" essay about
-why it applies to both computer intruders and enthusiasts of software (or 
+why it applies to both computer intruders and enthusiasts of software (or
 otherwise)</a>. In any case, I'm going to make a startling claim: <b>some
 great hackers write inelegant code</b>. Furthermore, I may go as far as
 saying that some great hackers cannot write code very elegantly. And what
@@ -38,7 +38,7 @@ I want to say is that it doesn't matter as much as we think.
 <p>
 Why? Because inelegant code is not necessarily bad code. Moreover, there's
 more to being a great programmer than writing elegant code because there
-are other parameters for 
+are other parameters for
 <a href="http://www.shlomifish.org/philosophy/computers/high-quality-software/rev2/">software quality</a> than just how elegant a code is, and a great
 programmer is judged by more than one.
 </p>
@@ -50,9 +50,9 @@ Let's start by making some more generally-accepted claims.
 <h2>Everyone Can Write Non-Elegant Code</h2>
 
 <p>
-Everyone can write non-elegant code, and often do. One reason is that 
+Everyone can write non-elegant code, and often do. One reason is that
 just like no one is <a href="http://xkcd.com/406/">going to write
-    a rebuttal with the rigour of a scientific paper in order to criticise a 
+    a rebuttal with the rigour of a scientific paper in order to criticise a
     really bad blog comment</a>, so would most
 people not bother applying all possible code elegance principles for
 a very simple script (possibly a throwaway one on the command line).
@@ -62,12 +62,12 @@ a very simple script (possibly a throwaway one on the command line).
 Another reason is that often people do non-conscious, or even conscious,
 coding mistakes or
 <a href="http://www.slideshare.net/xSawyer/red-flags-1683319">red flags</a>,
-which they hope to remedy later. And finally due to the 
+which they hope to remedy later. And finally due to the
 <a href="http://en.wikipedia.org/wiki/You_ain%27t_gonna_need_it">principle
 of avoiding over-engineering (or YAGNI)</a>, and the fact that a code often
 outgrows its original intention (as was the case for many notable
-open-source projects in use today), we sometimes end up with somewhat patchy 
-and inelegant code. This code can be refactored, but it still often remains 
+open-source projects in use today), we sometimes end up with somewhat patchy
+and inelegant code. This code can be refactored, but it still often remains
 inelegant in many respects.
 </p>
 
@@ -75,7 +75,7 @@ inelegant in many respects.
 
 <p>
 What would you rather have: a super-elegant program for doing something
-meaningless like printing "Hello, World!" 
+meaningless like printing "Hello, World!"
 (<a href="http://www.roesler-ac.de/wolfram/hello.htm">here you go - knock
 yourself out.</a>), or a large but not very elegant code-base, which is
 still functional and mostly bug-free, that implements something amazing:
@@ -83,7 +83,7 @@ a gcc-compatible C/C++ compiler, a functional web-browser, a usable
 dialect of Lisp, a usable desktop environment, or whatever. (And no, I don't
 mean one of the new age lightweight window managers which we've seen an
 inflation of, or yet another Scheme implementation - these are relatively
-easy to write). 
+easy to write).
 </p>
 
 <p>
@@ -92,7 +92,7 @@ code-base, assuming its licence and its other technical barriers are acceptable
 to me. That's because there's no way I can make the "Hello, World!" program into
 something like that.  On the other hand, if I'm unhappy with the lack of
 elegance and modularity of the large code-base, I can always start by writing
-automated tests for it, and then refactor it until it's elegant enough. 
+automated tests for it, and then refactor it until it's elegant enough.
 "Joel on Software"
 describes <a
     href="http://www.joelonsoftware.com/articles/fog0000000348.html">the
@@ -109,18 +109,18 @@ I ran into), and finally doing a ground-up refactoring of it.
 Even the least modular codebase, which is still functional, can probably be
 salvaged more easily than completely rewriting it. So, a large amount
 of functional code is superior to a very small amount of fully elegant
-code.  
+code.
 </p>
 
 <h2>Some Great Hacks Did Not Have Very Elegant Code</h2>
 
 <p>
-Was the original 
+Was the original
 <a href="http://en.wikipedia.org/wiki/Patch_%28Unix%29">patch by Larry Wall</a>
-elegant? It was not. The original perl 1 also suffered from many big no-nos, 
+elegant? It was not. The original perl 1 also suffered from many big no-nos,
 including many <tt>if (!strncmp(...))</tt>'s in the lexer, and lots of other
 anti-patterns, and I still recall the hideousness of the original
-<a href="http://perldoc.perl.org/s2p.html">s2p (= sed-to-perl)</a> 
+<a href="http://perldoc.perl.org/s2p.html">s2p (= sed-to-perl)</a>
 by Larry Wall, which was more recently replaced by a rewrite. The first
 <a href="http://en.wikipedia.org/wiki/Linux_kernel">Linux kernel</a> was
 also very ad-hoc, not portable to other architectures, and could only run
@@ -130,23 +130,23 @@ on the specific architecture which Linus Torvalds had at home.
 <p>
 But they were still great hacks. Why? Because they were otherwise usable, or
 a good promising prototype that were later enhanced into something incredible.
-patch immediately proved to be instrumental in sharing changes between 
-programmers, and has been 
+patch immediately proved to be instrumental in sharing changes between
+programmers, and has been
 <a href="http://catb.org/esr/writings/taoup/html/ch02s01.html#id2880014">given
-    a place of honour in the history section of "The Art of 
+    a place of honour in the history section of "The Art of
     UNIX Programming"</a> (and even eventually evolved into <a href="http://savannah.gnu.org/projects/patch/">GNU patch</a>); perl 1, despite all of its limitations proved
 that there was a more robust and easy way to write shell scripts and even
 a lot of tasks that previously required C (or as Larry Wall noted
 <a href="http://www.perl.org.il/presentations/larry-wall-present-continuous-future-perfect/transcript.html">combined
     "whipuptitude" and "manipulexity"</a>), which pioneered the case for
-the high-level, practical, and dynamic languages (or so-called "scripting 
+the high-level, practical, and dynamic languages (or so-called "scripting
 languages"); and the
 Linux kernel while being very limited was good enough to start work on a more
 mature kernel,
 that <a href="http://catb.org/~esr/writings/cathedral-bazaar/">with the right
     attitude (see ESR's "The Cathedral and the Bazaar" article)</a> progressed
 rapidly into becoming an industrial strength kernel, that combined with
-the previously or independently written GNU runtime and other software also 
+the previously or independently written GNU runtime and other software also
 formed the basis of the
 <a href="http://en.wikipedia.org/wiki/Linux">Linux
     (or so-called "GNU/Linux")</a> industrial-strength,
@@ -167,9 +167,9 @@ Which finally brings us to:
 
 <p>
 When we say someone is a great hacker, do we mean that this is because
-he or she writes elegant code? <a href="http://catb.org/esr/writings/homesteading/homesteading/ar01s11.html">There 
+he or she writes elegant code? <a href="http://catb.org/esr/writings/homesteading/homesteading/ar01s11.html">There
     seems to be a taboo against publicly saying that hackers are bad
-    programmers</a> (though I've noticed some evidence to the contrary lately), 
+    programmers</a> (though I've noticed some evidence to the contrary lately),
 so I'll try to be very careful here. What I think is that there are many
 other qualities that a great hacker may possess that may compensate for
 inability to write very elegant code. These may include writing a lot of
@@ -191,7 +191,7 @@ factor that affects its quality. Most of the code we find in the wild
 (including in the open-source world) is probably not very elegant
 or modular, and we can find many faults with it. But most of that code is
 functional, does what it should do, is not flooded with critical bugs,
-and should not be rewritten. 
+and should not be rewritten.
 (<a href="http://www.shlomifish.org/philosophy/computers/open-source/foss-licences-wars/">Licensing</a>
 and other legal and technical obstacles put aside)
 </p>
@@ -200,10 +200,10 @@ and other legal and technical obstacles put aside)
 
 <p>
 I think that as open-source programmers, we are too quick to judge someone
-based on the elegance and modularity of their code. "He writes awful code, so 
-he's a bad programmer.". Maybe it's due to the fact that as "hackers", we feel 
-that coding is closer to an art form, than other people may wish to believe. I 
-agree with such sentiments, but we should also accept that people are not 
+based on the elegance and modularity of their code. "He writes awful code, so
+he's a bad programmer.". Maybe it's due to the fact that as "hackers", we feel
+that coding is closer to an art form, than other people may wish to believe. I
+agree with such sentiments, but we should also accept that people are not
 perfect
 or may not live to our standards at first.
 </p>
@@ -218,12 +218,12 @@ we're not going to be perfect either.
 
 <p>
 My point is that when evaluating how much someone we know is a good hacker,
-we should ask ourselves many questions besides how modular their code is. 
+we should ask ourselves many questions besides how modular their code is.
 Do they write a lot of code quickly? Do they implement proof-of-concept
-code with good ideas that other people are happy to contribute to? Can 
+code with good ideas that other people are happy to contribute to? Can
 they motivate other people? Do they communicate well in English? Do they
 they have other positive programming practices? Does their code perform well?
-Do they have good social skills? There's more than one variable in the 
+Do they have good social skills? There's more than one variable in the
 equation.
 </p>
 
@@ -244,7 +244,7 @@ However, we should understand that code elegance is not the only parameter for
 a programmer's competence, and finally, that even inexperienced, or mediocre
 hackers can prove of use in many cases, because they will either uncover
 limitations in the open-source project's on-line presence, accessibility
-and usability, or they can work on other tasks, while their competency 
+and usability, or they can work on other tasks, while their competency
 improves. Back when I contributed a little to
 <a href="http://freshmeat.net/projects/subversion/">Subversion</a>, and
 submitted patches there, I received many comments on very small aspects
@@ -252,7 +252,7 @@ of the code that stood against their rigid standards of coding. But I didn't
 give up, and eventually received
 <a href="http://svn.haxx.se/dev/archive-2003-08/0476.shtml">a lot of
     recognition</a>. Later on, I behaved similarly to people who contributed
-patches to the projects I maintain (which are naturally of far smaller scope 
+patches to the projects I maintain (which are naturally of far smaller scope
 and importance than Subversion.).
 </p>
 
